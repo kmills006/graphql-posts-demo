@@ -1,5 +1,6 @@
 import seedAuthors from './seedAuthors';
 import seedPosts from './seedPosts';
+import seedComments from './seedComments';
 import { SEED_DATABASE } from '../../config';
 
 export default async () => {
@@ -8,5 +9,8 @@ export default async () => {
   }
 
   await seedAuthors();
-  await seedPosts();
+
+  const posts = await seedPosts();
+
+  await seedComments(posts);
 };
