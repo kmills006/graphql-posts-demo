@@ -1,8 +1,3 @@
-export default () => (
-  [{
-    id: 'ID',
-    authorId: 'Author ID',
-    title: 'My awesome blog post',
-    body: 'Body',
-  }]
-);
+import { Post } from '../../db';
+
+export default async () => Post.find().lean().exec();
