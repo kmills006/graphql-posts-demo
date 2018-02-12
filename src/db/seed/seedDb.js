@@ -1,4 +1,5 @@
 import seedAuthors from './seedAuthors';
+import seedPosts from './seedPosts';
 import { SEED_DATABASE } from '../../config';
 
 export default async () => {
@@ -7,4 +8,5 @@ export default async () => {
   }
 
   await seedAuthors();
+  await seedPosts();
 };
