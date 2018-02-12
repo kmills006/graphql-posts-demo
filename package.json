@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.14.9"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
