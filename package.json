@@ -4,6 +4,12 @@
   "main": "index.js",
   "author": "Kristy Miller <kristy@kmills.co>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src --exec babel-node",
+    "lint": "eslint src --ext .js",
+    "build": "babel src --out-dir build",
+    "start": "npm run dev"
+  },
   "devDependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"
