@@ -1,0 +1,7 @@
+{
+  "name": "graphql-posts-demos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kristy Miller <kristy@kmills.co>",
+  "license": "MIT"
+}
