@@ -2,15 +2,16 @@ import 'babel-polyfill';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import { createGraphQLServer } from './graphql';
 import { PORT } from './config';
-
-console.log('PORT: ', PORT);
 
 const startServer = async () => {
   const app = express();
 
   app.use(cors());
   app.use(helmet());
+
+  createGraphQLServer(app);
 
   const server = app.listen(PORT, () => {
     const { port } = server.address();
