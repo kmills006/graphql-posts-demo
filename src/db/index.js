@@ -4,3 +4,6 @@ export { default as connectToDb } from './connect';
 export { default as Post } from './models/Post';
 export { default as Author } from './models/Author';
 export { default as Comment } from './models/Comment';
+
+/* Seed Database */
+export { default as seedDb } from './seed/seedDb';

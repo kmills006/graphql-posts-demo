@@ -7,4 +7,5 @@ const { env } = process;
 
 export const ENABLE_GRAPHIQL = env.ENABLE_GRAPHIQL;
 export const MONGODB_URI = env.MONGODB_URI || 'mongodb://localhost/graphqlpostsdemo';
+export const SEED_DATABASE = env.SEED_DATABASE;
 export const PORT = env.PORT || 3000;
