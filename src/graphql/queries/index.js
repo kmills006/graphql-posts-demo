@@ -1,5 +1,9 @@
-import posts from './posts';
+import { Author, Comment, Post } from '../../db';
 
 export default {
-  posts,
+  authors: async () => Author.find().lean().exec(),
+
+  comments: async () => Comment.find().lean().exec(),
+
+  posts: async () => Post.find().lean().exec(),
 };

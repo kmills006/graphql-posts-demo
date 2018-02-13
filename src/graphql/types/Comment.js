@@ -4,5 +4,7 @@ export default `
     postId: ID!
     authorId: ID!
     comment: String!
+    post: Post!
+    author: Author!
   }
 `;

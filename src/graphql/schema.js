@@ -1,11 +1,13 @@
 import { makeExecutableSchema } from 'graphql-tools';
-
 import queryResolvers from './queries';
+import resolverMaps from './resolver-maps';
 import types from './types';
 
 const Query = `
   type Query {
-    posts: [Post]
+    authors: [Author]!
+    comments: [Comment]!
+    posts: [Post]!
   }
 `;
 
@@ -17,6 +19,7 @@ const typeDefs = [
 export default makeExecutableSchema({
   typeDefs,
   resolvers: {
+    ...resolverMaps,
     Query: queryResolvers,
   },
 });

@@ -4,5 +4,7 @@ export default `
     authorId: ID!
     title: String!
     body: String!
+    author: Author!
+    comments: [Comment]!
   }
 `;

@@ -3,5 +3,7 @@ export default `
     _id: ID!
     firstName: String!
     lastName: String!
+    posts: [Post]!
+    comments: [Comment]!
   }
 `;
