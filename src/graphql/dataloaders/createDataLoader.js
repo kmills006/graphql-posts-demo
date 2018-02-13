@@ -3,7 +3,9 @@ import alignDataloaderValues from 'dataloader-values';
 
 const createDataLoader = (Model, { keyFieldName, hasMany = false }) => (
   new DataLoader(async (keys) => {
-    console.log(`Fetching relational data from ${Model.collection.collectionName}...`);
+    const { collectionName } = Model.collection;
+
+    console.log(`Fetching relational data from ${collectionName}...`);
 
     const values = await Model.find({
       [keyFieldName]: {
@@ -12,6 +14,8 @@ const createDataLoader = (Model, { keyFieldName, hasMany = false }) => (
     })
       .lean()
       .exec();
+
+    console.log(`${values.length} ${collectionName} fetched!`);
 
     return alignDataloaderValues({
       keys,
