@@ -1,13 +1,17 @@
 import mongoose from 'mongoose';
 
+const { ObjectId } = mongoose.Schema.Types;
+
 const schema = new mongoose.Schema({
   postId: {
     required: true,
-    type: String,
+    type: ObjectId,
+    index: true,
   },
   authorId: {
     required: true,
-    type: String,
+    type: ObjectId,
+    index: true,
   },
   comment: {
     required: true,

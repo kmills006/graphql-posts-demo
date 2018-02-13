@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+const { ObjectId } = mongoose.Schema.Types;
+
 const schema = new mongoose.Schema({
   title: {
     required: true,
@@ -11,7 +13,8 @@ const schema = new mongoose.Schema({
   },
   authorId: {
     required: true,
-    type: String,
+    type: ObjectId,
+    index: true,
   },
 }, {
   timestamps: true,
