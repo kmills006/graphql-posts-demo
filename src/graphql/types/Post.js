@@ -1,7 +1,7 @@
 export default `
   type Post {
-    _id: String!
-    authorId: String!
+    _id: ID!
+    authorId: ID!
     title: String!
     body: String!
   }

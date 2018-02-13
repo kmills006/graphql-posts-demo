@@ -1,8 +1,8 @@
 export default `
   type Comment {
-    _id: String!
-    postId: String!
-    authorId: String!
+    _id: ID!
+    postId: ID!
+    authorId: ID!
     comment: String!
   }
 `;

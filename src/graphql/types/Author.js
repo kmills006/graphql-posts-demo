@@ -1,6 +1,6 @@
 export default `
   type Author {
-    _id: String!
+    _id: ID!
     firstName: String!
     lastName: String!
   }
